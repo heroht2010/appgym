@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:padding="5dp">
+        <androidx.cardview.widget.CardView
+            android:layout_height="100dp"
+            android:layout_width="125dp"
+           app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:id="@+id/image_product_type"
+                android:layout_width="125dp"
+                android:layout_height="100dp"
+                android:background="#FFFFFF"
+                android:scaleType="fitXY"/>
+            <RelativeLayout
+                android:layout_width="125dp"
+                android:layout_height="100dp"
+                android:alpha="0.6"
+                android:background="#000000" />
+
+            <ImageView android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/image_icon_type"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="@drawable/icon_facebook"/>
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="WHEY PROTEIN"
+                android:layout_gravity="bottom|center_horizontal"
+                android:fontFamily="@font/open_sans_light"
+                android:textColor="#fff"
+                android:id="@+id/txtproduct_type"
+                android:layout_alignParentBottom="true"/>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navi_gymapp"
+    app:startDestination="@id/fragment_homepage">
+
+    <fragment
+        android:id="@+id/fragment_homepage"
+        android:name="com.myproject.vietnam.gymapp.homepage"
+        android:label="fragment_homepage"
+        tools:layout="@layout/fragment_homepage" >
+        <action
+            android:id="@+id/action_fragment_homepage_to_detail_product"
+            app:destination="@id/detail_product" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_productlist"
+        android:name="com.myproject.vietnam.gymapp.productlist"
+        android:label="fragment_productlist"
+        tools:layout="@layout/fragment_productlist" />
+    <fragment
+        android:id="@+id/fragment_productlove"
+        android:name="com.myproject.vietnam.gymapp.productlove"
+        android:label="fragment_productlove"
+        tools:layout="@layout/fragment_productlove" />
+    <fragment
+        android:id="@+id/fragment_userprofile"
+        android:name="com.myproject.vietnam.gymapp.userprofile"
+        android:label="fragment_userprofile"
+        tools:layout="@layout/fragment_userprofile" >
+        <action
+            android:id="@+id/action_fragment_userprofile_to_fragment_Login"
+            app:destination="@id/fragment_Login" />
+    </fragment>
+    <fragment
+        android:id="@+id/detail_product"
+        android:name="com.myproject.vietnam.gymapp.Detail_product"
+        android:label="fragment_detail_product"
+        tools:layout="@layout/fragment_detail_product" />
+    <fragment
+        android:id="@+id/fragment_Login"
+        android:name="com.myproject.vietnam.gymapp.fragment_Login"
+        android:label="fragment__login"
+        tools:layout="@layout/fragment__login" >
+        <action
+            android:id="@+id/action_fragment_Login_to_fragment_register"
+            app:destination="@id/fragment_register" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_register"
+        android:name="com.myproject.vietnam.gymapp.fragment_register"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+</navigation>

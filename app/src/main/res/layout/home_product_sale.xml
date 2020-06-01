@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:paddingLeft="10dp">
+        <androidx.cardview.widget.CardView
+            android:layout_height="150dp"
+            android:layout_width="200dp"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:id="@+id/image_product_sale"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:background="#FFFFFF" />
+            <RelativeLayout android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp">
+            <ImageView android:layout_height="25dp"
+                android:layout_width="100dp"
+                android:background="@drawable/draw_square">
+
+            </ImageView>
+                <TextView android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Khuyến mãi"
+                    android:textSize="10dp"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginTop="4dp"
+                    android:textColor="#fff"
+                    android:fontFamily="@font/open_sans_light"
+                    />
+            </RelativeLayout>
+            <RelativeLayout android:layout_height="58dp"
+                android:layout_width="match_parent"
+                android:background="#000"
+                android:layout_gravity="bottom"
+                android:alpha="0.3"/>
+            <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                android:padding="5dp"
+                >
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Whey Protein đạm H2PTC"
+                android:textColor="#fff"
+                android:id="@+id/txtnameproduct_sale"/>
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingbarProduct"
+                    android:numStars="5"
+                    android:progressTint="#FFD700"
+                    android:secondaryProgressTint="#000"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    />
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="fasfasfasf"
+                android:textColor="#fff"
+                android:id="@+id/txtprice_product_sale"
+                />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

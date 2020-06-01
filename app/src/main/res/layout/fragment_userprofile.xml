@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".userprofile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/open_sans_light"
+                android:gravity="center"
+                android:text="Về người dùng"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+            <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tài khoản của tôi"
+            android:textColor="#000000"
+            android:textSize="12dp"
+            android:fontFamily="@font/open_sans_light"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"/>
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp">
+                <RelativeLayout android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    >
+                    <ImageView android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/ic_exit_to_app"
+                        android:id="@+id/iconbacktoapp"
+                        android:layout_marginRight="5dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iconbacktoapp"
+                        android:fontFamily="@font/open_sans_light"
+                        android:text="Đăng nhập/Đăng ký"
+                        android:textColor="#000000"
+                        android:textSize="14dp"
+                        android:id="@+id/txtlogin_user"/>
+                </RelativeLayout>
+                <RelativeLayout android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    >
+                    <ImageView android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/ic_person_outline_black_24dp"
+                        android:id="@+id/iconuser"
+                        android:layout_marginRight="5dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iconuser"
+                        android:fontFamily="@font/open_sans_light"
+                        android:text="Hồ sơ của tôi"
+                        android:textColor="#000000"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    >
+                    <ImageView android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/ic_heart_border_black_24dp"
+                        android:id="@+id/iconheart"
+                        android:layout_marginRight="5dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iconheart"
+                        android:fontFamily="@font/open_sans_light"
+                        android:text="Sở thích sản phẩm"
+                        android:textColor="#000000"
+                        android:textSize="14dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/open_sans_light"
+                android:padding="10dp"
+                android:text="Nhân viên hỗ trợ"
+                android:textColor="#000000"
+                android:textSize="12dp" />
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp">
+                <RelativeLayout android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    >
+                    <ImageView android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/ic_headset_mic_black_24dp"
+                        android:id="@+id/iconcall1"
+                        android:layout_marginRight="5dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iconcall1"
+                        android:fontFamily="@font/open_sans_light"
+                        android:text="VN GYM Hà Nội - 19001999"
+                        android:textColor="#ef473a"
+                        android:textSize="14dp"
+                        android:id="@+id/txtcontact1"
+                        android:layout_marginRight="38dp"/>
+                    <ImageView android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/ic_local_phone_black_24dp"
+                        android:layout_toRightOf="@id/txtcontact1"
+                        />
+                </RelativeLayout>
+                <RelativeLayout android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    >
+                    <ImageView android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/ic_headset_mic_black_24dp"
+                        android:id="@+id/iconcall2"
+                        android:layout_marginRight="5dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iconcall2"
+                        android:fontFamily="@font/open_sans_light"
+                        android:text="VN GYM Hồ Chí Minh - 19001910"
+                        android:textColor="#ef473a"
+                        android:textSize="14dp"
+                        android:layout_marginRight="5dp"
+                        android:id="@+id/txtcontact2"/>
+                    <ImageView android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/ic_local_phone_black_24dp"
+                        android:layout_toRightOf="@id/txtcontact2"
+                        />
+                </RelativeLayout>
+                <RelativeLayout android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    >
+                    <ImageView android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/ic_headset_mic_black_24dp"
+                        android:id="@+id/iconcall3"
+                        android:layout_marginRight="5dp"/>
+
+                    <TextView
+                        android:id="@+id/txtcontact3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_toRightOf="@id/iconcall3"
+                        android:fontFamily="@font/open_sans_light"
+                        android:text="VN GYM Đà Nẵng - 19001817"
+                        android:textColor="#ef473a"
+                        android:textSize="14dp" />
+
+                    <ImageView android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/ic_local_phone_black_24dp"
+                        android:layout_toRightOf="@id/txtcontact3"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/open_sans_light"
+                android:padding="10dp"
+                android:text="Cài đặt"
+                android:textColor="#000000"
+                android:textSize="12dp" />
+        <LinearLayout android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp">
+            <RelativeLayout android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                >
+                <ImageView android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/ic_notifications_none_black_24dp"
+                    android:id="@+id/iconalert"
+                    android:layout_marginRight="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/iconalert"
+                    android:fontFamily="@font/open_sans_light"
+                    android:text="Thông báo"
+                    android:textColor="#000000"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+        </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

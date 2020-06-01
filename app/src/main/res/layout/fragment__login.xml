@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment_Login"
+    android:background="@drawable/colorcustom">
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        <ImageView android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/imageappmain"
+            android:layout_gravity="center"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtusername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#fff"
+            app:counterEnabled="true"
+            app:counterMaxLength="15"
+            app:errorEnabled="true"
+            app:errorTextColor="#FCFC1E"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="#fff"
+                android:fontFamily="@font/open_sans_light"
+                android:hint="Tên đăng nhập"
+                android:padding="10dp"
+                android:textColor="#fff"
+                android:textColorHighlight="#FFFFFF"
+                android:textColorHint="#fff"
+                android:textColorLink="#FFFFFF"
+                android:textCursorDrawable="@color/design_default_color_on_primary" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:errorEnabled="true"
+            app:passwordToggleEnabled="true"
+            android:textColorHint="#fff"
+            android:id="@+id/edtpassword"
+            app:errorTextColor="#FCFC1E">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="#fff"
+                android:fontFamily="@font/open_sans_light"
+                android:hint="Mật khẩu"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="#fff"
+                android:textColorHighlight="#FFFFFF"
+                android:textColorHint="#fff"
+                android:textColorLink="#FFFFFF"
+                android:textCursorDrawable="@color/design_default_color_on_primary" />
+        </com.google.android.material.textfield.TextInputLayout>
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtforget_pass"
+        android:text="Quên mật khẩu?"
+        android:textColor="#fff"
+        android:fontFamily="@font/open_sans_light"
+        android:layout_gravity="right"/>
+        <Button android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:id="@+id/btnlogin"
+            android:text="Đăng nhập"
+            android:fontFamily="@font/open_sans_light"
+            android:background="@drawable/custom_edittext"
+            android:textColor="#ef473a"
+            android:textSize="18dp"
+            android:layout_marginTop="15dp"/>
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="--------------------     HOẶC     --------------------"
+            android:fontFamily="@font/open_sans_light"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:layout_marginTop="25dp"/>
+        <LinearLayout android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+            <Button android:layout_height="40dp"
+                android:layout_width="150dp"
+                android:text="facebook"
+                android:fontFamily="@font/open_sans_bold"
+                android:textColor="#fff"
+                android:paddingLeft="20dp"
+                android:textStyle="bold"
+                android:paddingRight="20dp"
+                android:layout_marginRight="15dp"
+                android:drawableLeft="@drawable/iconfacebook"
+                android:background="@drawable/custom_btn_facebook"
+                />
+            <Button android:layout_height="40dp"
+                android:layout_width="150dp"
+                android:text="google"
+                android:fontFamily="@font/open_sans_bold"
+                android:textColor="#DD4B39"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:textStyle="bold"
+                android:drawableLeft="@drawable/icongoole"
+                android:background="@drawable/custom_edittext"
+                />
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chưa có tài khoản?"
+            android:fontFamily="@font/open_sans_light"
+            android:textColor="#fff"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:id="@+id/txtregister"/>
+    </LinearLayout>
+
+</FrameLayout>

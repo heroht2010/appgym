@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/fragment_homepage"
+        android:title="Home"
+        android:icon="@drawable/ic_home_black"/>
+    <item android:id="@+id/fragment_productlist"
+        android:title="Sản phẩm"
+        android:icon="@drawable/ic_list_black"/>
+    <item android:id="@+id/fragment_productlove"
+        android:title="Yêu thích"
+        android:icon="@drawable/ic_love_black"/>
+    <item android:id="@+id/fragment_userprofile"
+        android:title="Tài khoản"
+        android:icon="@drawable/ic_user_black"/>
+</menu>

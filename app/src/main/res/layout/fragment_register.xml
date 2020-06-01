@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment_register"
+    android:background="@drawable/backgroundregister">
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tạo tài khoản"
+            android:fontFamily="@font/open_sans_bold"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="#ef473a"
+            android:layout_marginTop="45dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtlastname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#000"
+            app:errorEnabled="true"
+            app:hintTextAppearance="@style/MyHintStyle"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:backgroundTint="#ef473a"
+                android:fontFamily="@font/open_sans_light"
+                android:hint="Họ"
+                android:padding="10dp"
+                android:textColor="#000"
+                android:textCursorDrawable="@color/design_default_color_on_primary" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtfirstname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#000"
+            app:hintTextAppearance="@style/MyHintStyle"
+            app:errorEnabled="true"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:backgroundTint="#ef473a"
+                android:fontFamily="@font/open_sans_light"
+                android:hint="Tên"
+                android:padding="10dp"
+                android:textColor="#000"
+                android:textCursorDrawable="@color/design_default_color_on_primary" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtusername_regis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#000"
+            app:counterEnabled="true"
+            app:counterMaxLength="15"
+            app:hintTextAppearance="@style/MyHintStyle"
+            app:errorEnabled="true"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:backgroundTint="#ef473a"
+                android:fontFamily="@font/open_sans_light"
+                android:hint="Tên đăng nhập"
+                android:padding="10dp"
+                android:textColor="#000"
+                android:textCursorDrawable="@color/design_default_color_on_primary" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtpassword_regis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#000"
+            app:passwordToggleEnabled="true"
+            app:hintTextAppearance="@style/MyHintStyle"
+            app:errorEnabled="true"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:backgroundTint="#ef473a"
+                android:fontFamily="@font/open_sans_light"
+                android:hint="Mật khẩu"
+                android:padding="10dp"
+                android:textColor="#000"
+                android:inputType="textPassword"
+                android:textCursorDrawable="@color/design_default_color_on_primary" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtrepassword_regis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#000"
+            app:passwordToggleEnabled="true"
+            app:hintTextAppearance="@style/MyHintStyle"
+            app:errorEnabled="true"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:backgroundTint="#ef473a"
+                android:fontFamily="@font/open_sans_light"
+                android:hint="Nhập lại mật khẩu"
+                android:padding="10dp"
+                android:textColor="#000"
+                android:inputType="textPassword"
+                android:textCursorDrawable="@color/design_default_color_on_primary" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:id="@+id/btnregister"
+            android:text="Đăng ký"
+            android:textColor="#fff"
+            android:fontFamily="@font/open_sans_light"
+            android:textSize="18dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_btn_register"/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtalready_account"
+            android:text="Đã có tài khoản"
+            android:fontFamily="@font/open_sans_light"
+            android:textColor="#ef473a"
+            android:textStyle="italic"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+</FrameLayout>

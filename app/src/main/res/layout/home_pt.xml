@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:paddingLeft="10dp">
+        <androidx.cardview.widget.CardView
+            android:layout_height="200dp"
+            android:layout_width="150dp"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:id="@+id/image_Pt"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:background="#FFFFFF"
+                android:scaleType="fitXY"/>
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:padding="2dp">
+                <Button android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/icon_facebook"
+                    android:layout_marginRight="5dp">
+                </Button>
+                <Button android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/icon_instagram"></Button>
+                <Button android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/icon_twitter"></Button>
+            </LinearLayout>
+            <LinearLayout android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="bottom"
+                android:padding="5dp">
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Lâm Lan"
+                android:textColor="#fff"
+                android:id="@+id/txtNamePt"/>
+                <TextView android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="98,8k Người theo dõi"
+                    android:textColor="#fff"
+                    android:id="@+id/txtFollowPt"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

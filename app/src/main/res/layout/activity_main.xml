@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navibottommain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        app:menu="@menu/menu_bottombar"
+        android:background="#fff"
+         app:labelVisibilityMode="labeled"
+        app:itemIconTint="@color/icon_bottomnavi"
+        app:itemTextColor="@color/icon_bottomnavi"/>
+
+    <fragment
+        android:id="@+id/fragment_main"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="57dp"
+        app:defaultNavHost="true"
+
+        app:navGraph="@navigation/navi_gymapp" />
+
+
+</RelativeLayout>
