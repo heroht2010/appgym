@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:padding="10dp">
+    <CheckBox android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/cbcart"
+        android:layout_marginTop="28dp"
+        android:buttonTint="#ef473a"
+        />
+
+    <ImageView
+        android:id="@+id/imgcart"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_toRightOf="@id/cbcart"
+        android:background="#FFFFFF"
+       android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/txtnamecart"
+        android:layout_toRightOf="@id/imgcart"
+        android:text="Xtend Pro Whey"
+        android:fontFamily="@font/open_sans_bold"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="#ef473a"
+        />
+
+    <TextView
+        android:id="@+id/txtdetailcart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtnamecart"
+        android:layout_toRightOf="@id/imgcart"
+        android:fontFamily="@font/open_sans_light"
+        android:text="la san pham the hinh giup phat trien co bap"
+        android:textColor="#CD000000"
+        android:textSize="12dp"
+        android:layout_marginTop="5dp"/>
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingbarcart"
+        android:numStars="5"
+        android:layout_marginTop="5dp"
+        android:progressTint="#FFD700"
+        android:secondaryProgressTint="#000"
+        android:layout_below="@id/txtdetailcart"
+        android:layout_toRightOf="@id/imgcart"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        />
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/txtpricecart"
+        android:layout_toRightOf="@id/imgcart"
+        android:layout_below="@id/ratingbarcart"
+        android:text="1.200.200 VNĐ"
+        android:fontFamily="@font/open_sans_light"
+        android:textSize="18dp"
+        android:textColor="#ef473a"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        />
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/txtpricesalecart"
+        android:layout_toRightOf="@id/txtpricecart"
+        android:layout_below="@id/ratingbarcart"
+        android:text="1.200.200 VNĐ"
+        android:fontFamily="@font/open_sans_light"
+        android:textSize="12dp"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        />
+</RelativeLayout>

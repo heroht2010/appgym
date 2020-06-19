@@ -36,7 +36,7 @@ public class productlist_recyclegrid_Adapter extends RecyclerView.Adapter<produc
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Glide
                 .with(context)
-                .load("http://192.168.1.3/VN-GYM/public/upload/product/"+home_productList.get(position).getImageProduct())
+                .load(getUrl.Url+"upload/product/"+home_productList.get(position).getImageProduct())
                 .override(200,200)
                 .into(holder.imgProductGrid);
         holder.txtNameProductGrid.setText(home_productList.get(position).getNameProduct());

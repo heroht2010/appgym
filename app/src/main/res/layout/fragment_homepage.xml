@@ -24,6 +24,7 @@
                     <ImageView android:layout_width="120dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center"
+                        android:id="@+id/imglogo"
                         android:background="@drawable/imageappmain"/>
 
                     <EditText
@@ -44,6 +45,7 @@
                         android:layout_height="30dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="5dp"
+                        android:id="@+id/btncart"
                         android:background="@drawable/ic_shopping_cart_black_24dp"/>
                 </LinearLayout>
             <androidx.cardview.widget.CardView

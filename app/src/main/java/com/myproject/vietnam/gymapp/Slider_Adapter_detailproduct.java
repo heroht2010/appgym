@@ -51,7 +51,7 @@ public class Slider_Adapter_detailproduct extends
     public void onBindViewHolder(SliderAdapterVH viewHolder, final int position) {
         Slider_Item_Detailproduct sliderItem = mSliderItems.get(position);
         Glide.with(context)
-                .load("http://192.168.1.4/VN-GYM/public/upload/product/"+sliderItem.getImage())
+                .load(getUrl.Url+"upload/product/"+sliderItem.getImage())
                 .fitCenter()
                 .into(viewHolder.imageViewBackground);
 

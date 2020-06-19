@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment_search">
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp"
+        android:background="@drawable/colorcustom">
+        <EditText android:layout_height="25dp"
+            android:layout_width="match_parent"
+            android:background="@drawable/customedittext_productlist"
+            android:drawableLeft="@drawable/ic_search_black_24dp"
+            android:hint="Sale 50% với mã code 'VN GYM STORE'"
+            android:textColorHint="#ef473a"
+            android:id="@+id/edtsearchproduct"
+            android:fontFamily="@font/open_sans_light"
+            android:textSize="15dp"/>
+    </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/recyclersearch"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            android:layout_marginTop="15dp">
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+    </ScrollView>
+</FrameLayout>

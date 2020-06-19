@@ -35,7 +35,7 @@ public class home_product_type_Adapter extends RecyclerView.Adapter<home_product
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Glide
                 .with(context)
-                .load("http://192.168.1.3/VN-GYM/public/upload/typeproduct/"+home_product_typeList.get(position).getImageProductType())
+                .load(getUrl.Url+"upload/typeproduct/"+home_product_typeList.get(position).getImageProductType())
                 .override(125,100)
                 .into(holder.imgProductType);
         Glide

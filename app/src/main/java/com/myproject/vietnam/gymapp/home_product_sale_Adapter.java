@@ -73,7 +73,7 @@ public class home_product_sale_Adapter extends RecyclerView.Adapter<home_product
         public void bind(final home_product_sale item, final OnItemClickListener listener) {
             Glide
                     .with(context)
-                    .load("http://192.168.1.5/VN-GYM/public/upload/product/"+item.getImageProduct())
+                    .load(getUrl.Url+"upload/product/"+item.getImageProduct())
                     .override(200,150)
                     .into(imageViewProductsale);
             txtnameProductsale.setText(item.getNameProduct());

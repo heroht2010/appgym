@@ -1,26 +1,34 @@
 package com.myproject.vietnam.gymapp;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.transition.Visibility;
 
 import android.os.Parcelable;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +41,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.facebook.share.model.ShareLinkContent;
 import com.smarteist.autoimageslider.IndicatorAnimations;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
@@ -81,6 +90,9 @@ public class homepage extends Fragment  {
     private RecyclerView recyclerViewtype;
     private ArrayList<home_product_type> home_product_types;
     private home_product_type_Adapter adaptertype;
+    //CART
+    private Button btncart;
+    SharedPreferences sharedPreferences;
     public homepage() {
         // Required empty public constructor
     }
@@ -117,58 +129,32 @@ public class homepage extends Fragment  {
     public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_homepage, container, false);
-        SharedPreferences sharedPreferences=homepage.this.getContext().getSharedPreferences("dataLogin", 0);
-        Toast.makeText(homepage.this.getContext(),""+sharedPreferences.getString("firstName","123"),Toast.LENGTH_LONG).show();
-        //search
-        edtSearch=(EditText)view.findViewById(R.id.edtsearch);
-        edtSearch.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        //cart
+        btncart=(Button) view.findViewById(R.id.btncart);
+        btncart.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if ((event != null && (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) || (actionId == EditorInfo.IME_ACTION_DONE)) {
-                    RequestQueue requestQueue= Volley.newRequestQueue(homepage.this.getContext());
-                    String urlSearch="http://192.168.1.3/VN-GYM/public/searchproduct";
-                    StringRequest stringRequest=new StringRequest(Request.Method.POST, urlSearch, new Response.Listener<String>() {
-                        @Override
-                        public void onResponse(String response) {
-                            Toast.makeText(homepage.this.getContext(),""+response,Toast.LENGTH_LONG).show();
-
-                        }
-                    }, new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-                            Toast.makeText(homepage.this.getContext(),""+error,Toast.LENGTH_LONG).show();
-
-                        }
-                    }){
-                        @Override
-                        protected Map<String, String> getParams() throws AuthFailureError {
-                            Map<String,String> params=new HashMap<>();
-                            params.put("key",edtSearch.getText().toString().trim());
-                            return params;
-                        }
-                    };
-                    stringRequest.setRetryPolicy(new RetryPolicy() {
-                        @Override
-                        public int getCurrentTimeout() {
-                            return 50000;
-                        }
-
-                        @Override
-                        public int getCurrentRetryCount() {
-                            return 50000;
-                        }
-
-                        @Override
-                        public void retry(VolleyError error) throws VolleyError {
-
-                        }
-                    });
-                    requestQueue.add(stringRequest);
-                    return true;
+            public void onClick(View v) {
+                sharedPreferences=homepage.this.getContext().getSharedPreferences("dataLogin",Context.MODE_PRIVATE);
+                if (sharedPreferences.contains("firstName")){
+                    startActivity(new Intent(homepage.this.getActivity(),cart_product.class));
                 }
-                return false;
+                else{
+                    startActivity(new Intent(homepage.this.getActivity(),emptycart.class));
+                }
+
             }
         });
+        //search
+        edtSearch=(EditText)view.findViewById(R.id.edtsearch);
+        edtSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavController navController=Navigation.findNavController(getActivity(),R.id.fragment_main);
+                navController.navigate(R.id.fragment_search);
+
+            }
+        });
+//
 
         //slider
          sliderView= view.findViewById(R.id.imageSlider);
@@ -178,15 +164,16 @@ public class homepage extends Fragment  {
         recyclerViewProduct=view.findViewById(R.id.recycle_product);
         recyclerViewPt=view.findViewById(R.id.recycle_pt);
         recyclerViewtype=view.findViewById(R.id.recycle_producttype);
-        String urlGetProductsale="http://192.168.1.3/VN-GYM/public/getproductsale";
-        String urlGetProduct="http://192.168.1.3/VN-GYM/public/getproduct";
-        String urlGetPt="http://192.168.1.3/VN-GYM/public/getpt";
-        String urlGetType="http://192.168.1.3/VN-GYM/public/getproducttype";
+        String urlGetProductsale=getUrl.Url+"getproductsale";
+        String urlGetProduct=getUrl.Url+"getproduct";
+        String urlGetPt=getUrl.Url+"getpt";
+        String urlGetType=getUrl.Url+"getproducttype";
         getProduct_sale(urlGetProductsale);
         getProduct(urlGetProduct);
         getProductType(urlGetType);
         getPt(urlGetPt);
         // Inflate the layout for this fragment
+
         return view;
     }
 
@@ -239,7 +226,7 @@ public class homepage extends Fragment  {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(homepage.this.getContext(),"loi",Toast.LENGTH_LONG).show();
+                Toast.makeText(homepage.this.getContext(),""+error,Toast.LENGTH_LONG).show();
             }
         });
         requestQueue.add(jsonArrayRequest);
@@ -311,7 +298,7 @@ public class homepage extends Fragment  {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(homepage.this.getContext(),"loi",Toast.LENGTH_LONG).show();
+                Toast.makeText(homepage.this.getContext(),""+error,Toast.LENGTH_LONG).show();
             }
         });
         requestQueue.add(jsonArrayRequest);
@@ -347,10 +334,11 @@ public class homepage extends Fragment  {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(homepage.this.getContext(),"loi",Toast.LENGTH_LONG).show();
+                Toast.makeText(homepage.this.getContext(),""+error,Toast.LENGTH_LONG).show();
             }
         });
         requestQueue.add(jsonArrayRequest);
+
     }
     //home_Product_Type
     private void getProductType(String url){
@@ -383,7 +371,7 @@ public class homepage extends Fragment  {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(homepage.this.getContext(),"loi",Toast.LENGTH_LONG).show();
+                Toast.makeText(homepage.this.getContext(),""+error,Toast.LENGTH_LONG).show();
             }
         });
         requestQueue.add(jsonArrayRequest);

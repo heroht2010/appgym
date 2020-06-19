@@ -95,8 +95,8 @@ public class productlist extends Fragment {
 
         SliderImage();
         //url
-        String urlGetType="http://192.168.1.3/VN-GYM/public/getproducttype";
-        String urlGetProduct="http://192.168.1.3/VN-GYM/public/getallproduct";
+        String urlGetType=getUrl.Url+"getproducttype";
+        String urlGetProduct=getUrl.Url+"getallproduct";
         getProductType(urlGetType);
         getProduct(urlGetProduct);
         return view;

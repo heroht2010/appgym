@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <ImageView
+        android:id="@+id/imgproductsame"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="#FFFFFF" />
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtnameproductsame"
+        android:text="Whey Xtend Pro"
+        android:fontFamily="@font/open_sans_light"
+        android:layout_below="@id/imgproductsame"/>
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtpriceproductsame"
+        android:text="1.200.200 VNĐ"
+        android:textColor="#ef473a"
+        android:textSize="12dp"
+        android:fontFamily="@font/open_sans_light"
+        android:layout_below="@id/txtnameproductsame"/>
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtpricesaleproductsame"
+        android:text="1.200.200 VNĐ"
+        android:textColor="#000"
+        android:textSize="8dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/open_sans_light"
+        android:layout_toRightOf="@id/txtpriceproductsame"
+        android:layout_below="@id/txtnameproductsame"/>
+    <ImageView android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/draw_lineblack"
+        android:layout_toRightOf="@id/txtpriceproductsame"
+        android:layout_below="@id/txtnameproductsame"
+        />
+</RelativeLayout>

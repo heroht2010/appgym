@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_fragment_homepage_to_detail_product"
             app:destination="@id/detail_product" />
+        <action
+            android:id="@+id/action_fragment_homepage_to_fragment_search"
+            app:destination="@id/fragment_search" />
     </fragment>
     <fragment
         android:id="@+id/fragment_productlist"
@@ -52,4 +55,13 @@
         android:name="com.myproject.vietnam.gymapp.fragment_register"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/fragment_search"
+        android:name="com.myproject.vietnam.gymapp.fragment_search"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/fragment_logined"
+        android:name="com.myproject.vietnam.gymapp.fragment_logined"
+        android:label="fragment_logined" />
 </navigation>

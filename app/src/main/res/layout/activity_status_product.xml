@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:padding="10dp">
+
+            <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đơn hàng"
+        android:fontFamily="@font/open_sans_light"
+        android:textColor="#000"
+        android:gravity="center"
+        android:textSize="22dp" />
+
+        </RelativeLayout>
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            android:id="@+id/tablayoutstatus"
+            app:tabTextColor="#000"
+            app:tabSelectedTextColor="#ef473a"
+            app:tabIndicatorColor="#ef473a"
+            />
+        <androidx.viewpager.widget.ViewPager
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/pagerstatus"/>
+    </LinearLayout>
+</RelativeLayout>

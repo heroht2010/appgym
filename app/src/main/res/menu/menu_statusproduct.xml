@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/fragment_homepage"
+        android:title="Home"/>
+    <item android:id="@+id/fragment_productlist"
+        android:title="Sản phẩm"/>
+    <item android:id="@+id/fragment_productlove"
+        android:title="Yêu thích"/>
+    <item android:id="@+id/fragment_userprofile"
+        android:title="Tài khoản"/>
+</menu>
